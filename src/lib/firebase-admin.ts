@@ -19,11 +19,15 @@ try {
   }
 }
 
-if (!getApps().length && firebaseConfig?.projectId) {
+const resolvedProjectId =
+  process.env.FIREBASE_PROJECT_ID ||
+  process.env.VITE_FIREBASE_PROJECT_ID ||
+  firebaseConfig?.projectId;
+
+if (!getApps().length && resolvedProjectId) {
   initializeApp({
-    projectId: firebaseConfig.projectId,
+    projectId: resolvedProjectId,
   });
 }
 
 export const adminAuth = getAuth();
-
