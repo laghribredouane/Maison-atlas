@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Lock, Mail, Eye, EyeOff, User, Store, ShieldCheck, KeyRound } from 'lucide-react';
+import { Lock, Mail, Eye, EyeOff, User, Store, ShieldCheck } from 'lucide-react';
 import { validateEmailPasswordInput } from '../utils/marketplace-rules';
 
 export interface AuthenticatedWorkspaceUser {
@@ -22,8 +22,7 @@ const WORKSPACE_META = {
     title: 'Connexion à l’Espace Client',
     subtitle:
       'Connectez-vous avec votre adresse email et votre mot de passe pour consulter votre historique de commandes, suivre vos colis COD et gérer vos retours.',
-    defaultEmail: 'client@maison-atlas.ma',
-    defaultPassword: 'Client2026!',
+    placeholderEmail: 'votre@email.ma',
     roleLabel: 'Client Privilège',
   },
   vendor: {
@@ -31,8 +30,7 @@ const WORKSPACE_META = {
     title: 'Connexion à l’Espace Vendeur',
     subtitle:
       'Identifiez-vous par email et mot de passe pour accéder à votre Dashboard Vendeur, ajouter de nouveaux produits au catalogue et piloter vos expéditions.',
-    defaultEmail: 'vendeur@atelier-zellige.ma',
-    defaultPassword: 'Vendeur2026!',
+    placeholderEmail: 'atelier@votre-boutique.ma',
     roleLabel: 'Manufacture / Vendeur Partenaire',
   },
   admin: {
@@ -40,8 +38,7 @@ const WORKSPACE_META = {
     title: 'Connexion Console d’Administration',
     subtitle:
       'Accès sécurisé par email et mot de passe réservé à l’administration centrale pour superviser les boutiques, produits, commandes COD, commissions et virements.',
-    defaultEmail: 'admin@maison-atlas.ma',
-    defaultPassword: 'Admin2026!',
+    placeholderEmail: 'admin@maison-atlas.ma',
     roleLabel: 'Administrateur Général',
   },
 } as const;
@@ -119,13 +116,6 @@ export const WorkspaceAuthGate: React.FC<WorkspaceAuthGateProps> = ({
     } finally {
       setSubmitting(false);
     }
-  };
-
-  const handleQuickFill = (targetEmail: string, targetPass: string) => {
-    setMode('login');
-    setEmail(targetEmail);
-    setPassword(targetPass);
-    setErrorMsg(null);
   };
 
   return (
@@ -270,7 +260,7 @@ export const WorkspaceAuthGate: React.FC<WorkspaceAuthGateProps> = ({
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder={meta.defaultEmail}
+                placeholder={meta.placeholderEmail}
                 className="w-full pl-9 pr-3 py-2.5 text-xs rounded-lg border border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-950"
               />
             </div>
@@ -332,72 +322,6 @@ export const WorkspaceAuthGate: React.FC<WorkspaceAuthGateProps> = ({
                 : 'Créer mon compte et accéder à mon espace'}
           </button>
         </form>
-
-        {/* Pre-configured Accounts Helper */}
-        <div className="px-6 py-4 bg-stone-50 dark:bg-stone-950/70 border-t border-stone-200 dark:border-stone-800 space-y-3">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-medium text-stone-700 dark:text-stone-300 inline-flex items-center gap-1.5">
-              <KeyRound className="w-3.5 h-3.5 text-amber-600" />
-              Comptes de démonstration pré-configurés (Email & Mot de passe)
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 gap-2 text-xs">
-            <div className="flex items-center justify-between p-2.5 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
-              <div>
-                <p className="font-semibold text-stone-900 dark:text-stone-100">
-                  1. Espace Client (Historique de commandes)
-                </p>
-                <p className="font-mono text-stone-500">
-                  client@maison-atlas.ma · Mot de passe : <strong>Client2026!</strong>
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => handleQuickFill('client@maison-atlas.ma', 'Client2026!')}
-                className="px-2.5 py-1.5 text-xs font-medium border border-stone-300 dark:border-stone-700 rounded hover:bg-stone-100 dark:hover:bg-stone-800 whitespace-nowrap"
-              >
-                Remplir Client
-              </button>
-            </div>
-
-            <div className="flex items-center justify-between p-2.5 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
-              <div>
-                <p className="font-semibold text-stone-900 dark:text-stone-100">
-                  2. Espace Vendeur + Dashboard (Ajout Produits)
-                </p>
-                <p className="font-mono text-stone-500">
-                  vendeur@atelier-zellige.ma · Mot de passe : <strong>Vendeur2026!</strong>
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => handleQuickFill('vendeur@atelier-zellige.ma', 'Vendeur2026!')}
-                className="px-2.5 py-1.5 text-xs font-medium border border-stone-300 dark:border-stone-700 rounded hover:bg-stone-100 dark:hover:bg-stone-800 whitespace-nowrap"
-              >
-                Remplir Vendeur
-              </button>
-            </div>
-
-            <div className="flex items-center justify-between p-2.5 rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
-              <div>
-                <p className="font-semibold text-stone-900 dark:text-stone-100">
-                  3. Console Admin (Contrôle Total)
-                </p>
-                <p className="font-mono text-stone-500">
-                  admin@maison-atlas.ma · Mot de passe : <strong>Admin2026!</strong>
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => handleQuickFill('admin@maison-atlas.ma', 'Admin2026!')}
-                className="px-2.5 py-1.5 text-xs font-medium border border-stone-300 dark:border-stone-700 rounded hover:bg-stone-100 dark:hover:bg-stone-800 whitespace-nowrap"
-              >
-                Remplir Admin
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
