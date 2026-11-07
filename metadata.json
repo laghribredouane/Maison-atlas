@@ -1,0 +1,6 @@
+{
+  "name": "Maison Atlas — Multi-Vendor E-Commerce Marketplace",
+  "description": "Plateforme marketplace e-commerce multi-vendeurs avec boutique publique éditoriale, espace client, console vendeur, administration complète style Shopify, paiements multi-passerelles (CMI, Payzone, Stripe, PayPal, COD) et support multilingue (FR, EN, AR) / multi-devises (MAD, EUR, USD).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

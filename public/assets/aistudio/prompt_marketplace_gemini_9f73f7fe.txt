@@ -1,0 +1,673 @@
+# MASTER PROMPT — DÉVELOPPEMENT D'UNE MARKETPLACE E-COMMERCE PROFESSIONNELLE
+
+## 1. TON RÔLE
+
+Agis comme une équipe internationale de développement composée de :
+
+- Senior Full-Stack Software Architect.
+- Expert React, TypeScript et Next.js.
+- Expert Supabase et PostgreSQL.
+- Expert UI/UX Design.
+- Expert Shopify et plateformes e-commerce.
+- Expert cybersécurité et protection des paiements.
+- Expert SEO et optimisation des performances.
+- Expert DevOps et déploiement Cloud.
+
+Ta mission est de concevoir, développer, tester et livrer une véritable marketplace e-commerce professionnelle, entièrement opérationnelle et prête à être déployée en production.
+
+Le résultat doit être comparable, en qualité fonctionnelle et en expérience utilisateur, aux grandes plateformes e-commerce internationales.
+
+Ne produis pas une simple maquette visuelle. Construis une application réelle avec frontend, backend, base de données, authentification, gestion des commandes, administration et sécurité.
+
+## 2. CONCEPT DU PROJET
+
+Créer une marketplace e-commerce permettant :
+
+- Aux clients d'acheter des produits.
+- Aux vendeurs de créer et gérer leurs boutiques.
+- Aux administrateurs de contrôler toute la plateforme.
+- Aux gestionnaires de gérer les commandes, produits et clients.
+- À la plateforme de gérer les commissions et les paiements.
+
+Le système doit prendre en charge plusieurs vendeurs, plusieurs boutiques, plusieurs catégories et plusieurs devises.
+
+Prévoir une architecture évolutive permettant une expansion internationale.
+
+## 3. TECHNOLOGIES OBLIGATOIRES
+
+Frontend :
+
+- Next.js avec App Router.
+- React.
+- TypeScript strict.
+- Tailwind CSS.
+- shadcn/ui.
+- Lucide Icons.
+- React Hook Form.
+- Zod pour la validation.
+- TanStack Query si nécessaire.
+
+Backend :
+
+- Supabase.
+- PostgreSQL.
+- Supabase Auth.
+- Supabase Storage.
+- Supabase Edge Functions.
+- Supabase Realtime lorsque nécessaire.
+
+Outils complémentaires :
+
+- Git et GitHub.
+- ESLint.
+- Prettier.
+- Vitest.
+- Playwright.
+- Vercel ou Netlify pour le déploiement.
+
+Utiliser des versions stables et compatibles des dépendances.
+
+## 4. DESIGN UI/UX — INSPIRÉ DE SHOPIFY
+
+Créer une interface premium, moderne et professionnelle inspirée de Shopify, sans copier son identité graphique.
+
+Caractéristiques :
+
+- Interface élégante et minimaliste.
+- Fond clair et surfaces bien structurées.
+- Palette de couleurs cohérente.
+- Typographie professionnelle.
+- Cartes produits modernes.
+- Navigation intuitive.
+- Tableaux administratifs avancés.
+- Menus latéraux intelligents.
+- Icônes cohérentes.
+- Animations discrètes.
+- Micro-interactions.
+- États de chargement.
+- Notifications visuelles.
+- Modales professionnelles.
+- Gestion des erreurs.
+- Mode clair et sombre.
+
+L'expérience doit être entièrement responsive sur ordinateur, tablette et mobile.
+
+Créer deux expériences visuelles distinctes :
+
+1. Boutique publique : expérience d'achat premium.
+2. Dashboard : interface professionnelle de gestion inspirée de Shopify Admin.
+
+## 5. BOUTIQUE PUBLIQUE
+
+Développer les pages suivantes :
+
+### Accueil
+
+- Bannière principale.
+- Produits populaires.
+- Nouveautés.
+- Meilleures ventes.
+- Promotions.
+- Catégories.
+- Boutiques recommandées.
+- Produits tendance.
+- Avis clients.
+- Newsletter.
+- Pied de page complet.
+
+### Catalogue
+
+- Affichage en grille et liste.
+- Recherche instantanée.
+- Filtres par catégorie.
+- Filtres par prix.
+- Filtres par marque.
+- Filtres par vendeur.
+- Filtres par disponibilité.
+- Tri par prix, popularité et nouveautés.
+- Pagination ou chargement progressif.
+
+### Fiche produit
+
+- Galerie d'images.
+- Zoom.
+- Vidéos produit.
+- Nom et description.
+- Prix et prix promotionnel.
+- Variantes.
+- Couleurs et tailles.
+- Disponibilité.
+- Quantité.
+- Informations vendeur.
+- Délais de livraison.
+- Avis et notes.
+- Produits similaires.
+- Bouton ajouter au panier.
+- Bouton acheter maintenant.
+- Liste de souhaits.
+
+### Panier
+
+- Ajout et suppression.
+- Modification des quantités.
+- Calcul automatique des totaux.
+- Codes promotionnels.
+- Frais de livraison.
+- Taxes configurables.
+- Devise sélectionnable.
+- Persistance du panier.
+
+### Commande et Checkout
+
+- Coordonnées client.
+- Adresse de livraison.
+- Choix du transporteur.
+- Choix du moyen de paiement.
+- Récapitulatif.
+- Confirmation de commande.
+- Numéro de commande unique.
+- Page de confirmation.
+- Email de confirmation.
+
+Permettre également les achats invités sans création obligatoire de compte.
+
+## 6. ESPACE CLIENT
+
+Créer un espace personnel comprenant :
+
+- Inscription.
+- Connexion.
+- Réinitialisation du mot de passe.
+- Gestion du profil.
+- Gestion des adresses.
+- Historique des commandes.
+- Suivi des livraisons.
+- Annulation selon les règles commerciales.
+- Demandes de retour et remboursement.
+- Liste de souhaits.
+- Avis produits.
+- Notifications.
+- Gestion des préférences.
+
+## 7. ESPACE VENDEUR — MULTI-VENDEURS
+
+Chaque vendeur dispose d'un espace indépendant.
+
+### Tableau de bord
+
+- Chiffre d'affaires.
+- Nombre de commandes.
+- Produits actifs.
+- Produits en rupture.
+- Revenus.
+- Commissions.
+- Graphiques.
+- Dernières commandes.
+
+### Gestion des produits
+
+- Ajouter un produit.
+- Modifier un produit.
+- Supprimer un produit.
+- Télécharger plusieurs images.
+- Ajouter des vidéos.
+- Définir les prix.
+- Définir les promotions.
+- Gérer les variantes.
+- Gérer les stocks.
+- SKU et codes-barres.
+- Gestion des catégories.
+- Statut brouillon ou publié.
+- Importation et exportation CSV.
+
+### Gestion des commandes
+
+- Consulter les commandes.
+- Accepter ou refuser.
+- Préparer les commandes.
+- Modifier les statuts.
+- Ajouter un numéro de suivi.
+- Confirmer l'expédition.
+- Gérer les retours.
+
+### Gestion financière
+
+- Chiffre d'affaires.
+- Commissions de la plateforme.
+- Solde vendeur.
+- Historique des transactions.
+- Demandes de retrait.
+- Historique des paiements.
+
+Un vendeur ne doit jamais accéder aux données d'un autre vendeur.
+
+## 8. DASHBOARD ADMINISTRATEUR — INSPIRATION SHOPIFY
+
+Créer un panneau d'administration complet.
+
+### Vue générale
+
+- Ventes totales.
+- Revenus nets.
+- Commandes.
+- Clients.
+- Vendeurs.
+- Produits.
+- Taux de conversion.
+- Panier moyen.
+- Graphiques journaliers, hebdomadaires et mensuels.
+
+### Gestion des produits
+
+- Ajouter.
+- Modifier.
+- Supprimer.
+- Valider.
+- Dépublier.
+- Gérer les catégories.
+- Gérer les marques.
+- Gérer les stocks.
+- Gérer les promotions.
+
+### Gestion des vendeurs
+
+- Liste des vendeurs.
+- Validation des inscriptions.
+- Suspension.
+- Activation.
+- Vérification des informations.
+- Définition des commissions.
+- Consultation des performances.
+
+### Gestion des clients
+
+- Liste des clients.
+- Informations de compte.
+- Historique des commandes.
+- Statut du compte.
+- Gestion des réclamations.
+
+### Gestion des commandes
+
+- Toutes les commandes.
+- Détails des commandes.
+- Modification des statuts.
+- Suivi des expéditions.
+- Annulations.
+- Retours.
+- Remboursements.
+
+### Gestion commerciale
+
+- Codes promotionnels.
+- Réductions.
+- Promotions temporaires.
+- Campagnes marketing.
+- Bannières.
+- Produits mis en avant.
+- Gestion de la page d'accueil.
+
+### Gestion financière
+
+- Revenus.
+- Commissions.
+- Paiements.
+- Remboursements.
+- Retraits vendeurs.
+- Transactions.
+- Rapports financiers.
+
+### Configuration générale
+
+- Nom du site.
+- Logo.
+- Favicon.
+- Couleurs.
+- Coordonnées.
+- Devises.
+- Langues.
+- Taxes.
+- Livraison.
+- Politiques commerciales.
+- Paramètres SEO.
+- Configuration des paiements.
+
+## 9. SYSTÈME DE PAIEMENT MULTI-PASSERELLES
+
+Prévoir une architecture indépendante des fournisseurs de paiement.
+
+Passerelles à intégrer ou préparer :
+
+- CMI.
+- Payzone.
+- Stripe si disponible pour le pays et l'entité commerciale.
+- PayPal si disponible.
+- Paiement à la livraison (COD).
+
+Exigences :
+
+- Interface de paiement abstraite.
+- Adaptateurs indépendants par fournisseur.
+- Configuration par variables d'environnement.
+- Vérification des signatures webhook.
+- Idempotence des transactions.
+- Gestion des paiements échoués.
+- Confirmation serveur.
+- Historique des transactions.
+- Remboursements lorsque pris en charge.
+- Aucun stockage des numéros de carte bancaire.
+
+Ne jamais simuler une transaction réelle ni afficher un paiement comme réussi sans confirmation fiable du fournisseur.
+
+Prévoir un mode sandbox pour les tests.
+
+Pour les paiements vendeurs, utiliser une architecture de portefeuille interne avec rapprochement financier et validation administrative. Ne pas effectuer de transferts automatiques sans intégration légale et technique adaptée.
+
+## 10. GESTION DES DEVISES ET LANGUES
+
+Devises :
+
+- MAD.
+- EUR.
+- USD.
+
+Fonctionnalités :
+
+- Devise principale configurable.
+- Conversion avec taux actualisables.
+- Historique des taux.
+- Arrondis monétaires corrects.
+- Prix enregistrés avec devise.
+- Affichage localisé.
+
+Langues :
+
+- Français.
+- Arabe avec RTL.
+- Anglais.
+
+Prévoir une architecture i18n évolutive.
+
+## 11. LIVRAISON ET LOGISTIQUE
+
+- Gestion des zones de livraison.
+- Frais de livraison configurables.
+- Livraison gratuite sous conditions.
+- Gestion des transporteurs.
+- Délais estimés.
+- Numéro de suivi.
+- Statuts de livraison.
+- Notifications.
+- Gestion des retours.
+
+## 12. MARKETING ET FONCTIONNALITÉS AVANCÉES
+
+- Codes promotionnels.
+- Réductions automatiques.
+- Programme de fidélité.
+- Avis vérifiés après achat.
+- Produits favoris.
+- Produits récemment consultés.
+- Produits recommandés.
+- Produits similaires.
+- Vente croisée.
+- Vente additionnelle.
+- Abandon de panier.
+- Newsletter.
+- Emails transactionnels.
+- Gestion des campagnes.
+- Pixels publicitaires configurables.
+- Google Analytics.
+- Meta Pixel.
+- Sitemap automatique.
+
+## 13. SEO ET PERFORMANCE
+
+- URL lisibles.
+- Métadonnées dynamiques.
+- Balises Open Graph.
+- Données structurées Schema.org.
+- Sitemap XML.
+- Robots.txt.
+- Canonical URLs.
+- Optimisation des images.
+- Lazy loading.
+- Mise en cache.
+- Optimisation Core Web Vitals.
+- Pages indexables.
+- Gestion des erreurs 404 et 500.
+
+## 14. ARCHITECTURE SUPABASE
+
+Créer une base de données PostgreSQL complète.
+
+Prévoir au minimum les tables suivantes :
+
+- profiles
+- user_roles
+- stores
+- store_members
+- vendor_applications
+- categories
+- brands
+- products
+- product_images
+- product_variants
+- inventory
+- customers
+- customer_addresses
+- carts
+- cart_items
+- orders
+- order_items
+- payments
+- payment_events
+- refunds
+- shipping_methods
+- shipments
+- coupons
+- coupon_redemptions
+- reviews
+- wishlists
+- wishlist_items
+- commissions
+- vendor_wallets
+- payout_requests
+- notifications
+- banners
+- pages
+- settings
+- exchange_rates
+- audit_logs
+
+Créer :
+
+- Relations et clés étrangères.
+- Index optimisés.
+- Contraintes SQL.
+- Triggers nécessaires.
+- Fonctions PostgreSQL.
+- Timestamps.
+- Gestion des suppressions.
+- Transactions financières cohérentes.
+
+Tous les scripts SQL doivent être complets et exécutables.
+
+## 15. SÉCURITÉ
+
+La sécurité est obligatoire.
+
+Implémenter :
+
+- Row Level Security sur toutes les tables exposées.
+- Politiques RLS par rôle.
+- Isolation stricte des vendeurs.
+- Isolation des données clients.
+- Vérification des permissions côté serveur.
+- Validation Zod.
+- Protection contre les injections SQL.
+- Protection XSS.
+- Protection CSRF selon les mécanismes d'authentification utilisés.
+- Limitation du débit des API.
+- Vérification des webhooks.
+- Journalisation des opérations sensibles.
+- Gestion des sessions.
+- Contrôle des fichiers téléversés.
+
+Ne jamais exposer :
+
+- SUPABASE_SERVICE_ROLE_KEY.
+- Secrets des passerelles.
+- Clés privées.
+- Tokens administratifs.
+
+Les opérations sensibles doivent être exécutées côté serveur ou dans des fonctions sécurisées.
+
+## 16. ARCHITECTURE DES FICHIERS
+
+Organiser le projet de manière professionnelle :
+
+marketplace/
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── (storefront)/
+│   │   ├── (auth)/
+│   │   ├── account/
+│   │   ├── vendor/
+│   │   ├── admin/
+│   │   └── api/
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── storefront/
+│   │   ├── dashboard/
+│   │   └── shared/
+│   ├── features/
+│   ├── hooks/
+│   ├── lib/
+│   │   ├── supabase/
+│   │   ├── payments/
+│   │   ├── shipping/
+│   │   └── security/
+│   ├── services/
+│   ├── types/
+│   ├── schemas/
+│   └── styles/
+├── supabase/
+│   ├── migrations/
+│   ├── functions/
+│   └── seed.sql
+├── tests/
+├── scripts/
+├── .env.example
+├── package.json
+├── tsconfig.json
+├── next.config.ts
+├── README.md
+└── DEPLOYMENT.md
+
+Tu peux adapter cette architecture si une meilleure organisation technique est justifiée.
+
+## 17. TESTS ET CONTRÔLE QUALITÉ
+
+Créer des tests pour :
+
+- Inscription et connexion.
+- Autorisations.
+- RLS.
+- Création des produits.
+- Gestion des stocks.
+- Panier.
+- Checkout.
+- Commandes.
+- Paiements sandbox.
+- Commissions.
+- Accès vendeur.
+- Accès administrateur.
+- Responsive design.
+
+Effectuer des tests de bout en bout.
+
+Corriger toutes les erreurs critiques avant la livraison.
+
+## 18. DÉPLOIEMENT
+
+Fournir un guide complet pour :
+
+1. Créer un projet Supabase.
+2. Configurer les variables d'environnement.
+3. Exécuter les migrations SQL.
+4. Configurer le stockage.
+5. Configurer les fonctions Edge.
+6. Créer le premier administrateur de façon sécurisée.
+7. Configurer les fournisseurs de paiement.
+8. Connecter GitHub.
+9. Déployer sur Vercel ou Netlify.
+10. Configurer le domaine personnalisé.
+11. Activer HTTPS.
+12. Configurer les emails.
+13. Tester le site en production.
+
+Le guide doit être adapté à un utilisateur qui peut effectuer les opérations depuis un smartphone Android.
+
+## 19. LIVRABLES FINAUX OBLIGATOIRES
+
+Fournir :
+
+1. Code source complet.
+2. Tous les fichiers du projet.
+3. Base de données SQL complète.
+4. Migrations Supabase.
+5. Politiques RLS complètes.
+6. Fonctions Edge.
+7. Configuration des paiements.
+8. Données de démonstration.
+9. Tests automatisés.
+10. Documentation technique.
+11. Guide utilisateur.
+12. Guide administrateur.
+13. Guide vendeur.
+14. Guide de déploiement.
+15. Fichier .env.example.
+16. Archive ZIP complète du projet.
+
+L'archive doit pouvoir être extraite et utilisée sans reconstruire manuellement les fichiers.
+
+## 20. MÉTHODE DE DÉVELOPPEMENT OBLIGATOIRE
+
+Ne génère pas tout le projet dans une réponse désorganisée.
+
+Travaille par phases :
+
+PHASE 1 : Architecture et conception.
+PHASE 2 : Initialisation et configuration du projet.
+PHASE 3 : Base de données et sécurité Supabase.
+PHASE 4 : Boutique publique.
+PHASE 5 : Authentification et espace client.
+PHASE 6 : Espace vendeur.
+PHASE 7 : Dashboard administrateur.
+PHASE 8 : Paiements et commandes.
+PHASE 9 : Marketing, SEO et logistique.
+PHASE 10 : Tests, corrections et optimisation.
+PHASE 11 : Documentation et déploiement.
+PHASE 12 : Génération de l'archive ZIP.
+
+À chaque phase :
+
+- Génère les fichiers complets.
+- Indique leur chemin exact.
+- Ne remplace jamais du code essentiel par des commentaires du type TODO.
+- Vérifie les imports et dépendances.
+- Vérifie la cohérence avec les phases précédentes.
+- Évite les fonctionnalités fictives.
+- Indique précisément ce qui est terminé et ce qui reste à faire.
+
+Si la réponse dépasse la limite de génération, continue en plusieurs parties sans supprimer de fonctionnalités ni recommencer les fichiers déjà validés.
+
+## OBJECTIF FINAL
+
+Livrer une marketplace multi-vendeurs professionnelle, sécurisée, évolutive et réellement opérationnelle, avec une expérience d'achat moderne et une administration comparable à Shopify.
+
+COMMENCE MAINTENANT PAR LA PHASE 1 : PRÉSENTE L'ARCHITECTURE TECHNIQUE, LES MODULES, LE SCHÉMA DE DONNÉES ET LE PLAN DE DÉVELOPPEMENT.
+
+Ensuite, attends ma validation avant de commencer la génération des fichiers de la PHASE 2.
